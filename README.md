@@ -1,54 +1,51 @@
-# React + TypeScript + Vite
+# Projeto de Comparação Tailwind CSS vs. Styled-Components
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto React demonstra a criação de um card de perfil do GitHub utilizando duas abordagens de estilização diferentes: Tailwind CSS e Styled-Components.
 
-Currently, two official plugins are available:
+## Pré-requisitos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Node.js instalado em sua máquina ([https://nodejs.org/](https://nodejs.org/))
+- npm ou yarn instalado (npm é instalado com o Node.js, yarn pode ser instalado separadamente: [https://yarnpkg.com/](https://yarnpkg.com/))
+- Git instalado em sua máquina ([https://git-scm.com/downloads](https://git-scm.com/downloads))
 
-## Expanding the ESLint configuration
+## Como rodar o projeto
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1.  Clone este repositório:
+    ```bash
+    git clone https://github.com/Ian-Siveris/GithubPerfis
+    cd GithubPerfis
+    ```
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+2.  Instale as dependências:
+    ```bash
+    npm install
+    # ou
+    yarn install
+    ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+3.  Inicie o servidor de desenvolvimento:
+    ```bash
+    npm run dev
+    # ou
+    yarn dev
+    ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+O projeto estará rodando em `http://localhost:5173` (ou outra porta especificada pelo Vite).
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## Rotas
+
+-   `/styled-components`: Exibe o card de perfil estilizado com Styled-Components.
+-   `/tailwindcss`: Exibe o card de perfil estilizado com Tailwind CSS.
+
+## Observações
+
+-   Este projeto exibe um card de perfil fixo com os dados de [https://github.com/Ian-Siveris](https://github.com/Ian-Siveris).
+-   As bibliotecas utilizadas para estilização são `styled-components` e `tailwindcss`. Para roteamento, utilizamos `react-router-dom`.
+
+## Autor
+
+Ian Siveris
+
+## Link para o Repositório no GitHub
+
+https://github.com/Ian-Siveris/GithubPerfis
